@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+    
+}
+body{
+    background-color: hsl(217, 54%, 11%);
+  }
+.objet{
+    position:relative;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+
+}
+.card{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows:  60% 35% 5%;
+    height: 70%;
+    max-width: 300px;
+    padding: 20px;
+    background-color: hsl(216, 50%, 16%);
+    width: 40%;
+    border-radius: 15px;
+    box-shadow: 0 30px 30px hsl(214, 53%, 8%);
+}
+.image{
+    grid-column: 1/2;
+    grid-row: 1;
+    display: block;
+    background-image: url(images/image-equilibrium.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.image::after{
+display: flex;
+    content: url(images/icon-view.svg);
+    color: #fff;
+    background-color: hsla(178, 100%, 50%, 0.429);
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.2s ease-in;
+}
+.image:hover::after{
+    opacity:1;
+    
+}
+
+.texte{
+    padding-top: 30px;
+    grid-row: 2;
+    font-family: "outfit";
+}
+.texte a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1em;
+    font-weight: 600;
+}
+.texte a:hover{
+    color:hsl(178, 100%, 50%);
+}
+.texte p{
+    padding-top: 10px;
+    font-size: 0.9em;
+    color: hsl(215, 32%, 27%);
+    font-weight: 600;
+}
+.bas{
+    padding-top: 20px;
+}
+.bas img{
+    margin-right: 5px;
+}
+.bas h1{
+    font-size: 0.8em;
+    color:hsl(215, 32%, 27%);
+    padding-bottom: 20px;
+}
+.bas .nb{
+    color: hsl(178, 100%, 50%);
+}
+.bas{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid 1px hsl(215, 32%, 27%);
+
+}
+.footer{
+    
+    grid-row: 3;
+    display: flex;
+    align-items: center;
+    font-family: "outfit";
+    font-weight: 600;
+    padding-top: 30px;
+}
+.footer p{
+    
+    font-size: 0.8em;
+    color: hsl(215, 32%, 27%);
+    
+}
+.footer img{
+    align-items: center;
+    margin-right: 10px;
+    width: 10%;
+    border: solid 1px #fff;
+    border-radius: 100%;
+}
+.footer p a{
+    text-decoration: none;
+    color: #fff;
+}
+.footer p a:hover{
+    color:hsl(178, 100%, 50%);
+}
